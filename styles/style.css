@@ -119,14 +119,15 @@
 }
 
 .staff__cards{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  align-items: stretch;
-  padding: 68px;
   max-width: 760px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 40px;
+  list-style-type: none;
+  /* align-items: stretch; */
+  padding-left: 0;
 }
 /* Agrega la regla CSS para tu nueva clase aquí. Asegúrate de colocarlo antes de .card:, los padres deben preceder a sus hijos */
 
