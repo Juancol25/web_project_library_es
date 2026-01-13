@@ -1,78 +1,93 @@
+/* ========= RESET ========= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========= PAGE ========= */
 .page {
-  /* Agrega las propiedades de la clase page aquí */
-  max-width: 1600px;
   min-width: 1100px;
-  margin: auto;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  font-family: "Arial", sans-serif;
   font-size: 16px;
-  font-family: arial;
   line-height: 20px;
 }
 
-
+/* ========= HEADER ========= */
 .header {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  min-height: 720px;
-  max-height: 800px;
   padding: 30px 80px 40px;
-  position: relative;
-  box-sizing: border-box;
+  overflow: hidden;
 }
 
+/* ========= NAV ========= */
 .nav {
-  /* Agrega las propiedades flex aquí */
-  display:flex;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
 }
 
 .nav__logo {
-  /*display:flex;*/
-  /*justify-content:flex-start;*/
-  height: 80px;
-  width: 58px;
+  display: block;
 }
 
 .nav__links {
-  /* Restablece los estilos predeterminados de list aquí */
   display: flex;
-  margin: 8px 0 0;
   column-gap: 20px;
   list-style-type: none;
-  padding: 0;
-  height: 30px;
-  }
-
-.nav__link {
-  color: #000000;
-  text-decoration: none;
-  font-weight: bold;
 }
 
+.nav__link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+/* ========= HEADER CONTENT ========= */
 .header__content {
-  /* Agrega las propiedades flex aquí */
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 32px;
+
+  margin-top: 128px;
+  margin-bottom: 32px;
+}
+
+.header__text {
+  max-width: 635px;
 }
 
 .header__title {
-  margin-top: 128px;
   max-width: 635px;
   font-size: 62px;
   line-height: 76px;
   font-weight: 500;
+
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .header__description {
-  margin: 32px 0 50px;
   max-width: 515px;
   font-size: 20px;
   line-height: 30px;
+
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .header__image {
   max-width: 636px;
-  margin: 0;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .header__footer {
@@ -90,82 +105,88 @@
 }
 
 .header__address {
-  margin: 0;
-  color: #838383;
+  font-size: 16px;
+  line-height: 20px;
 }
 
+/* ========= STAFF SECTION ========= */
 .staff {
   background-image: url("../images/staff_picks_background.jpg");
-  padding: 100px 0 140px;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 80px 0;
 }
 
 .staff__title {
+  font-size: 32px;
+  line-height: 44px;
   text-align: center;
-  font-size: 44px;
-  line-height: 52px;
-  font-weight: 400;
-  margin: 0 0 24px;
-  color: #ffffff;
+  font-weight: bold;
+  margin: 0 0 8px;
 }
 
 .staff__subtitle {
+  font-size: 18px;
+  line-height: 26px;
   text-align: center;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 400;
-  margin: 0;
-  color: #ffffff;
+  color: #555;
+  margin: 0 0 40px;
 }
 
-.staff__cards{
+/* ========= CARDS CONTAINER ========= */
+.staff__cards {
   max-width: 760px;
-  margin: 68px auto 0;
+  margin: 0 auto;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px 40px;
+  gap: 40px;
+
   list-style-type: none;
-  /* align-items: stretch; */
   padding-left: 0;
 }
-/* Agrega la regla CSS para tu nueva clase aquí. Asegúrate de colocarlo antes de .card:, los padres deben preceder a sus hijos */
 
+/* ========= CARD ========= */
 .card {
-  background-color: #fff;
-  border-radius: 6px;
-  padding: 32px 40px 20px 32px;
-  box-sizing: border-box;
-  height: 420px;
   width: 360px;
+  height: 420px;
+  background-color: #ffffff;
+
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .card__content {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
+/* ========= CARD TEXT ========= */
 .card__title {
   font-size: 20px;
-  line-height: 30px;
-  font-weight: 700;
-  margin: 0;
+  line-height: 26px;
+  margin: 0 0 16px;
 }
 
 .card__text {
-  margin: 20px 0 0;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 24px;
 }
 
 .card__footer {
-  margin: 0;
-  margin-top: auto;
   font-size: 14px;
   line-height: 20px;
-  color: #838383;
+  margin-top: auto;
 }
 
 .events {
@@ -255,14 +276,14 @@
   left: 319px;
 }
 
+.person_name_tarter {
+  top: 79px;
+  left: 159px;
+}
+
 .person_name_burbidge {
   top: 96px;
   right: 125px;
-}
-
-.person_name_cannon { 
-  bottom: 10px;
-  right: 216px;
 }
 
 .person_name_mitchell {
@@ -270,9 +291,9 @@
   left: 142px;
 }
 
-.person_name_tarter {
-  top: 79px;
-  left: 159px; 
+.person_name_cannon {
+  bottom: 18px;
+  right: 216px;
 }
 
 .person__image {
